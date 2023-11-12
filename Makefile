@@ -7,6 +7,8 @@
 
 OBJ 	= 	$(SRC:.cpp=.o)
 SRC     = 	src/main.cpp \
+			src/game.cpp	\
+			src/Menu.cpp	\
 
 CC 	= g++
 INCLUDE = -I./include
