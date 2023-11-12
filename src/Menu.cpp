@@ -17,6 +17,7 @@ Menu::Menu()
     quit.setFillColor(sf::Color::Cyan);
     quit.setCharacterSize(30);
     quit.setPosition(350, 500);
+    MustachSprite.setOrigin(70, 23);
     menuLoop();
 }
 
@@ -66,6 +67,7 @@ void Menu::jumping(void)
         if (timejump > 500 && mustachposY < base)
             mustachposY += 0.07;
         setPos();
+        MustachSprite.rotate(rotation);
         _window.clear(sf::Color::Blue);
         _window.draw(MustachSprite);
         _window.display();

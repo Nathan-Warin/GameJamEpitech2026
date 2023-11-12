@@ -19,6 +19,7 @@ class Menu {
         sf::Font font;
         sf::Text play;
         sf::Text quit;
+        float rotation = 0.2;
     public:
         Menu();
         void menuLoop(void);
