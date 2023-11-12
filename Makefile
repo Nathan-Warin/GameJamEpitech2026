@@ -13,7 +13,7 @@ SRC     = 	src/main.cpp \
 CC 	= g++
 INCLUDE = -I./include
 LFLAG = -g -g3 -Wextra -Wall -Werror -W -std=c++20 -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system
-BIN = moustachio
+BIN = running_mustach
 
 all : build_all
 

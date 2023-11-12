@@ -16,7 +16,7 @@ Game::Game()
     fireBallSprite3.setTexture(fireBallTexture);
     MustachSprite.setScale(0.8, 0.8);
     LifeRazorSprite1.setScale(0.5, 0.5);
-    score.setString("SCORE: 0");
+    score.setString("SCORE: " + std::to_string(Score));
     score.setFont(font);
     score.setFillColor(sf::Color::White);
     score.setCharacterSize(20);
@@ -27,7 +27,7 @@ Game::Game()
 
 void Game::gameLoop(void)
 {
-    _window.create(sf::VideoMode(800, 600), "Moustachio");
+    _window.create(sf::VideoMode(800, 600), "running mustach");
 
     while (_window.isOpen()) {
         setImagePos();
@@ -94,10 +94,8 @@ void Game::checkCase(void)
     MustachSprite.rotate(rotation);
     if (((mustachpos + 20) > 450 && basefireballY1 < 95 && basefireballY1 > 80) || ((mustachpos + 20) > 450 && basefireballY2 < 95 && basefireballY2 > 80) || ((mustachpos + 20) > 450 && basefireballY3 < 95 && basefireballY3 > 80))
         life--;
-    if (life == 0) {
-        Game game;
+    if (life == 0)
         _window.close();
-    }
 }
 
 void Game::displayGame(void)

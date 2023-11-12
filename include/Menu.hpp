@@ -13,7 +13,7 @@ class Menu {
         sf::Event event;
         sf::Texture MustachTexture;
         sf::Sprite MustachSprite;
-        float mustachposX = 350;
+        float mustachposX = 390;
         float mustachposY = 300;
         bool launchGame = false;
         sf::Font font;

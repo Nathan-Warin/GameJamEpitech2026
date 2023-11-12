@@ -23,7 +23,7 @@ Menu::Menu()
 
 void Menu::menuLoop(void)
 {
-    _window.create(sf::VideoMode(800, 600), "Moustachio");
+    _window.create(sf::VideoMode(800, 600), "Menu running mustach");
 
     while (_window.isOpen()) {
         _window.pollEvent(event);
@@ -44,7 +44,7 @@ void Menu::menuLoop(void)
         if (event.type == sf::Event::Closed || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
             _window.close();
         setPos();
-        _window.clear(sf::Color::Blue);
+        _window.clear(sf::Color(24, 144, 208));
         _window.draw(MustachSprite);
         _window.draw(play);
         _window.draw(quit);
@@ -68,7 +68,7 @@ void Menu::jumping(void)
             mustachposY += 0.07;
         setPos();
         MustachSprite.rotate(rotation);
-        _window.clear(sf::Color::Blue);
+        _window.clear(sf::Color(24, 144, 208));
         _window.draw(MustachSprite);
         _window.display();
     }
